@@ -1,0 +1,6 @@
+{
+  "name": "Chloe Beauty Hub",
+  "description": "Luxury wigs, hair treatments, manicure, and pedicure beauty hub with full React frontend and PHP/MySQL backend.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
