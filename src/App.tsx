@@ -46,7 +46,6 @@ export default function App() {
       {/* Top Fixed Navigation */}
       <Navbar
         onOpenBooking={() => handleOpenBooking()}
-        onOpenBackendModal={() => setIsBackendModalOpen(true)}
         onOpenAdminModal={() => setIsAdminOpen(true)}
       />
 

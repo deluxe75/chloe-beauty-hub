@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sparkles, Calendar, Code2, Phone } from 'lucide-react';
+import { Menu, X, Sparkles, Calendar } from 'lucide-react';
 
-export default function Navbar({ onOpenBooking, onOpenBackendModal, onOpenAdminModal }) {
+export default function Navbar({ onOpenBooking, onOpenAdminModal }) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -68,16 +68,6 @@ export default function Navbar({ onOpenBooking, onOpenBackendModal, onOpenAdminM
 
           {/* Desktop Actions */}
           <div className="hidden sm:flex items-center gap-3">
-            <button
-              id="nav-backend-code-btn"
-              onClick={onOpenBackendModal}
-              title="View PHP Backend, SQL Schema & Setup Guide"
-              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-lg text-[#684C55] bg-[#FAF2F4] hover:bg-[#F4E1E6] transition-colors border border-[#EACCD4]"
-            >
-              <Code2 className="w-3.5 h-3.5 text-[#9B2242]" />
-              <span>PHP Backend</span>
-            </button>
-
             <button
               id="nav-admin-bookings-btn"
               onClick={onOpenAdminModal}
@@ -152,26 +142,14 @@ export default function Navbar({ onOpenBooking, onOpenBackendModal, onOpenAdminM
                 Book Appointment
               </button>
 
-              <div className="grid grid-cols-2 gap-2 pt-1">
-                <button
-                  id="mobile-view-php-btn"
-                  onClick={() => {
-                    setIsOpen(false);
-                    onOpenBackendModal();
-                  }}
-                  className="py-2.5 px-3 rounded-lg text-xs font-semibold text-[#684C55] bg-[#FAF2F4] border border-[#EACCD4] flex items-center justify-center gap-1.5"
-                >
-                  <Code2 className="w-3.5 h-3.5 text-[#9B2242]" />
-                  PHP Backend
-                </button>
-
+              <div className="pt-1">
                 <button
                   id="mobile-view-bookings-btn"
                   onClick={() => {
                     setIsOpen(false);
                     onOpenAdminModal();
                   }}
-                  className="py-2.5 px-3 rounded-lg text-xs font-semibold text-[#4A3B40] bg-[#F7F6F5] border border-[#E4DFD8] flex items-center justify-center gap-1.5"
+                  className="w-full py-2.5 px-3 rounded-lg text-xs font-semibold text-[#4A3B40] bg-[#F7F6F5] border border-[#E4DFD8] flex items-center justify-center gap-1.5"
                 >
                   <Calendar className="w-3.5 h-3.5 text-[#684C55]" />
                   Bookings
